@@ -1,35 +1,26 @@
-package PatternObject;
+package pageObjects;
 
-public class RegisterPageObject {
-    public void selectToGenderMale() {
+import commons.BasePage;
+import org.openqa.selenium.WebDriver;
+import pageUI.LoginPageUI;
+
+public class LoginPageObject extends BasePage {
+
+    public LoginPageObject(WebDriver driver) {
+        this.driver = driver;
     }
 
-    public void inputToFirstnameTextbox() {
+    private WebDriver driver;
+
+    public void inputEmailTextbox(String emailAddress) {
+        sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
     }
 
-    public void inputToLastnameTextbox() {
+    public void inputPasswordTextbox(String passwword) {
+        sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, passwword);
     }
 
-    public void inputToEmailTextbox() {
+    public void clickToLoginButton() {
+        clickToElement(driver, LoginPageUI.REGISTER_LINK);
     }
-
-    public void inputToCompanyNameTextbox() {
-    }
-
-    public void inputToPasswordTextbox() {
-    }
-
-    public void inputToConfirmPasswordTextbox() {
-    }
-
-    public void clickToRegisterLink() {
-    }
-
-    public void textConfirmRegisterSuccess() {
-    }
-
-    public void clickToLogoutLink() {
-
-    }
-
 }

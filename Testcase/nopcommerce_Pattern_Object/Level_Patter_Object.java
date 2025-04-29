@@ -1,4 +1,4 @@
-package nopcommerce_Pattern_Object;
+package nopcommerce_pattern_object;
 
 import PatternObject.HomePageObject;
 import PatternObject.LoginPageObject;
